@@ -1,3 +1,4 @@
+import 'package:easy_vahan/carAddPage.dart';
 import 'package:easy_vahan/login%20compo/my_button.dart';
 import 'package:easy_vahan/login%20compo/my_textfield.dart';
 import 'package:easy_vahan/login%20compo/square_tile.dart';
@@ -12,6 +13,7 @@ class RegisterPage extends StatelessWidget {
    final confirmpasswordController = TextEditingController();
   // register user in method
   void registerUserIn() {}
+
 
   @override
   Widget build(BuildContext context) {
@@ -81,9 +83,24 @@ class RegisterPage extends StatelessWidget {
                     const SizedBox(height: 25),
 
                     // sign in button
-                    MyButton(
-                      onTap: registerUserIn,
-                    ),
+                    Container(
+                        height: 50,
+                        width: 340,
+                        decoration: BoxDecoration(
+                            color: Colors.black
+                        ),
+                        child: ElevatedButton(onPressed: (){
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) {return CarAddPage();},));}, child: Text(
+                          'Next',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 24,
+                            fontFamily: 'Exo 2',
+                            fontWeight: FontWeight.w400,
+                          ),
+                        ),)),
 
                     const SizedBox(height: 50),
 

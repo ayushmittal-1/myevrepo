@@ -66,7 +66,8 @@ class Entry extends StatelessWidget {
                         decoration: BoxDecoration(
                           color: Colors.black
                         ),
-                        child: ElevatedButton(onPressed: (){ Navigator.push(context,
+                        child: ElevatedButton(onPressed: (){
+                          Navigator.push(context,
                             MaterialPageRoute(builder: (context) {return RegisterPage();},));}, child: Text(
                           'New User?',
                           textAlign: TextAlign.center,
